@@ -18,17 +18,34 @@
         <spring.starter.test>3.3.1</spring.starter.test>
         <lombok.version>1.18.34</lombok.version>
         <spring.devtools.version>3.3.1</spring.devtools.version>
+        <spring.session.core-version>6.1.11</spring.session.core-version>
+        <spring.validation.version>3.3.1</spring.validation.version>
+        <h2.version>2.3.230</h2.version>
     </properties>
 
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>${spring.data.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+            <version>${spring.validation.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.session.core-version}</version>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-commons</artifactId>
@@ -55,6 +72,13 @@
             <artifactId>spring-boot-devtools</artifactId>
             <version>${spring.devtools.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>${h2.version}</version>
+        </dependency>
+
+
     </dependencies>
 
 </project>
